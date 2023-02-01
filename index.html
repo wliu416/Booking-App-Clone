@@ -7,30 +7,47 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
-    <style>
-        [class*="col"] {
-            padding: 1rem;
-            background-color: #33b5e5;
-            border: 2px solid white;
-            color: white;
-        }
-    </style>
 </head>
 <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md">
+            <a hred="#" class="navbar-brand">
+                <img src="logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>home
 
-    <header>
-        <div id="topHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <a href="">Restify</a>
-                        <a href="">Hi</a>
-                    </div>
-                </div>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li>
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                </ul>
+
             </div>
-        </div>
-    </header>
+
+        </nav>
+    </div>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     
+
 </body>
 </html>
