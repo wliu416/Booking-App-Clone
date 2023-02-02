@@ -1,6 +1,9 @@
 .home_page_search {
     height: 40px;
-    width: 300px;
+    width: 250px;
     border-radius: 30px;
 }
 
+.horizontal_line {
+    margin: 0px;
+}
