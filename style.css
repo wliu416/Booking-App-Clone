@@ -15,12 +15,26 @@ body {
   border-radius: 15px;
 }
 
-.button_format {
+.signin_container {
+  margin-top: 150px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.button_format_sign_in,
+.button_format_sign_up {
   background-color: #ff5a5f;
   border-color: #ff5a5f;
 }
 
-.btn:hover {
+.button_format_sign_in:hover,
+.button_format_sign_up:hover {
   background-color: #ff5a5f;
   border-color: #ff5a5f;
+}
+
+.btn-success:active:focus {
+  background-color: #00a699;
+  border-color: #00a699;
 }
