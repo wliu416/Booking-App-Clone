@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.signup_container {
+  margin-top: 100px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.button_format {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.btn:hover {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
