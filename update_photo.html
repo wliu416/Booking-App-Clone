@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="cream-bg">
+        <div
+          class="container d-flex align-items-center"
+          style="min-height: 100vh; height: 100%"
+        >
+          <div class="row justify-content-evenly">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="row g-0">
+                  <div
+                    class="col-6 col-md-5 d-flex align-items-center justify-content-center"
+                  >
+                    <div>
+                      <img
+                        src="profile_placeholder.png"
+                        class="card-img img-fluid image_profile"
+                        alt="italian house"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-7">
+                    <div class="card-body d-flex flex-column">
+                      <div class="h-100">
+                        <h1 class="card-title">Profile Photo</h1>
+                        <p class="card-text">
+                          A profile photo that shows your face can help other
+                          hosts and guests get to know you. If you’re a guest, a
+                          host won't be able to see it until your booking is
+                          confirmed.
+                        </p>
+                        <input
+                          class="borderAttachment"
+                          type="file"
+                          name="attachments"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="profile.html">
+                <input
+                  class="btn btn-success fw-semibold button_format_sign_in"
+                  value="Go back"
+                  id="back_button_update_photo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
