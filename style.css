@@ -44,3 +44,41 @@ body {
   background-color: #00a699;
   border-color: #00a699;
 }
+
+.img_profile_container {
+  text-align: center;
+}
+
+.image_profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.update_profile_picture {
+  margin-top: 15px;
+}
+
+.update_profile_picture_link {
+  color: black;
+}
+
+.legal_name_profile {
+  margin-top: 15px;
+}
+
+.actual_legal_name_profile,
+.email_profile,
+.phone_number_profile {
+  margin-top: -15px;
+}
+
+.legal_name_summary,
+.email_address_summary,
+.phone_number_summary {
+  list-style-type: none;
+}
+
+.save_button_profile {
+  margin-top: 10px;
+}
