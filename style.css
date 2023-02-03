@@ -25,6 +25,21 @@ body{
     border-bottom-right-radius: 0px;
 }
 
+.next_button {
+    background-color: #ff5a5f;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 30px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.next_button_div {
+    display: flex;
+    justify-content: center;
+}
 
 
 footer {   
