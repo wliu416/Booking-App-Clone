@@ -1,9 +1,37 @@
+body{
+    min-height: 100vh;
+}
+
 .home_page_search {
     height: 40px;
     width: 250px;
     border-radius: 30px;
 }
 
-.horizontal_line {
+#horizontal_line_1_home_page{
     margin: 0px;
 }
+
+.home_page_main {
+    margin: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 0px;
+}
+
+
+footer {   
+    color: grey;  
+    height: 3rem;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 15px;  
+    position: sticky;
+    top: 100%;
+    border: 1px solid lightgray;
+  } 
