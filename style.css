@@ -80,7 +80,27 @@ footer {
     transform: scale(1.1);
 }
 
-
+.host_reservation_request_button_approve {
+    background-color: white;
+    border-color: #ff5a5f;
+    color: #ff5a5f;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  
+  .host_reservation_request_button_approve:hover {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+    color: white;
+  }
+  
+  .host_reservation_request_button_approve:active:focus {
+    background-color: white;
+    border-color: #ff5a5f;
+    color: #ff5a5f;
+  }
 
 
 
