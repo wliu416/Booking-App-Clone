@@ -229,10 +229,4 @@ footer {
     width: 60px;
     font-size: 10px;
   }
-  .card_container,
-  .main_container,
-  .card,
-  .card_deck {
-    width: 100vw;
-  }
 }
