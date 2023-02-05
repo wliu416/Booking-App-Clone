@@ -15,7 +15,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_approve2")
     .addEventListener("click", function (event) {
@@ -31,7 +30,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_approve3")
     .addEventListener("click", function (event) {
@@ -47,7 +45,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_approve4")
     .addEventListener("click", function (event) {
@@ -63,7 +60,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_approve5")
     .addEventListener("click", function (event) {
@@ -79,7 +75,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_approve6")
     .addEventListener("click", function (event) {
@@ -95,7 +90,6 @@ window.onload = function () {
       this.style.backgroundColor = "#ff5a5f";
       this.style.color = "white";
     });
-
   // if declined button is clicked
   document
     .getElementById("host_reservation_request_button_decline1")
@@ -112,7 +106,6 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_decline2")
     .addEventListener("click", function (event) {
@@ -128,7 +121,6 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_decline3")
     .addEventListener("click", function (event) {
@@ -144,7 +136,6 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_decline4")
     .addEventListener("click", function (event) {
@@ -160,7 +151,6 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_decline5")
     .addEventListener("click", function (event) {
@@ -176,7 +166,6 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
-
   document
     .getElementById("host_reservation_request_button_decline6")
     .addEventListener("click", function (event) {
