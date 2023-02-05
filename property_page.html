@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="lightbox.min.css">
+    <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
 
 </head>
 <body>
@@ -15,7 +17,7 @@
     <!-- The header -->
     <div class="container header">
         <nav class="navbar navbar-expand-md">
-            <a hred="#" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
                 <span style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
                     Restify
@@ -57,26 +59,146 @@
     <!-- main -->
     <main>
 
-     
+    <h3 class="property_photo_text1" style="color: grey;">Valencia, Spain</h3>
+    <div>
+    <h2 class="property_photo_text2">
+         Spanish Mediterranean Retreat
+    </h2>
+    </div>
 
+    <div style="display: flex; align-items: center; height: 50px;">
+        <img src="five_stars.png" alt="your-image-alt" style="height: 25px; margin-left: 30px;">
+        <a href="#reviews" style="margin-left: 5px; color: black;">4 reviews</a>
+      </div>
 
+    <div class="gallery">
+        <a href="interior1.png" data-lightbox="mygallery"><img src="interior1.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="interior2.png" data-lightbox="mygallery"><img src="interior2.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="interior3.png" data-lightbox="mygallery"><img src="interior3.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="interior4.png" data-lightbox="mygallery"><img src="interior4.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+        <a href="interior5.png" data-lightbox="mygallery"><img src="interior5.png" height="200px" style="margin-left: 30px; margin-top: 20px; border-radius: 20px;"></a>
+    </div>
+
+    <div class="host_info" style="margin-top: 20px; margin-left: 30px;">
+        <img src="spanish.jpg" style="height: 40px; width: 40px; border-radius: 50%;">
+        <span style="margin-left: 10px;">Hosted by Alfonzo S.</span>
+        <i class="fa fa-envelope" aria-hidden="true" style="margin-left: 10px;"></i>
+        <a class= "email" href="mailto:alphonzograciassaz@gmail.com?subject=Inquiry&body=I would like to inquire about this property" style="color: black;">alphonzograciassaz@gmail.com</a>  
+        <i class="fa fa-phone" aria-hidden="true" style="margin-left: 10px;"></i>
+        <span>647-901-1633</span>
+    </div>
+
+    <div class="about_section" style="margin-top: 20px; margin-left: 30px;">
+        <h3>About This Property</h3>
+        <span style="color: grey; font-weight: 100;">2 guests &middot; 1 bedroom &middot; 1 bed &middot; 1 bath</span>
+
+        <div style="margin-top: 10px;">
+            <i class="fa fa-calendar"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Free cancellation for 48 hours.</span>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <i class="fa fa-door-open"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Self check-in.</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <i class="fa-solid fa-house-laptop"></i>
+            <span style="font-weight: 500; margin-left: 5px;">Dedicated workspace.</span>
+        </div>
+
+        <div class="Amenities" style="margin-top: 20px;">
+            <h6 style="color: grey;">Amenities</h6>
+            <span>
+                <i class="fa-solid fa-kitchen-set"></i>
+                <span>Kitchen</span>
+            </span>
+            <span style="margin-left: 20px">
+                <i class="fa-solid fa-wifi"></i>
+                <span>Wifi</span> 
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-car"></i>
+                <span>Free parking</span>
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-sink"></i>
+                <span>Bathroom essentials</span>
+            </span>
+            <span style="margin-left: 20px;">
+                <i class="fa-solid fa-tv"></i>
+                <span>HDTV</span>
+            </span>
+
+        </div>
+
+        <h6 style="margin-top: 20px; font-weight: 500; color:grey">Property Description</h6>
+        <p style="margin-top: px;">This Spanish retreat is located only 5 kilometers from the center of Valencia. Located near the 
+        beach, you can enjoy the hot sun while swimming in the beautiful blue ocean. The property is also located near many restaurants,
+    enjoy Spanish cuisine such as Tapas and many more. Valencia is a city known for its architecture, culture, and rich history. There
+    is an endless amount of things that you can do there, sightseeing, eating, walking, going to the beach, the possibilities are endless.
+     The property itself has Moorish influence and has the design of a mosque's interior as a homage to Spain's Islamic past. The property
+    comes with 1 bedroom and 1 bathroom and is suitable for 2 guests, perfect for a couple's honeymoon!</p>
+
+    </div>
+
+    <div id="reviews" style="margin:30px;">
+        <h3>Reviews</h3>
+        <div style="border: 1px solid lightgray; border-radius: 10px;"> 
+
+            <div style="margin-left: 20px; margin-top: 20px; margin-bottom: 20px;">
+                <i class="fa-sharp fa-solid fa-2x fa-star"></i>
+                <span style="font-size: 30px;">5 Stars &middot 4 Reviews</span>
+            </div>
+                <div>
+                <span style="margin-left: 20px;">Cleanliness <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;"> Accuracy <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;">Communication <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;"> Location <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <span style="margin-left: 20px;">Check-in <span style="font-weight: bold;">5.0</span></span> 
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+
+                <div style="margin-top: 10px; margin-bottom: 20px;">
+                <span style="margin-left: 20px;"> Value <span style="font-weight: bold;">5.0</span></span>
+                <div class="progress-bar" style="background-color: black;width: 300px;height: 10px;border-radius: 5px; margin-left: 20px;">
+                </div>
+                </div>
+        </div>
 
 
 
 
         
-
-
-
-
-
-
+        </div>
+          
+    </div>
 
 
     </main>
 
     <!-- The footer -->
-    <footer>  
+    <footer style="margin-top: 20px;">  
         <p>Copyright Restify 2023.</p>  
     </footer>  
 
