@@ -90,4 +90,12 @@ window.onload = function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
+
+  function checkValue(input) {
+    if (input.value < 1) {
+      input.value = 1;
+    } else if (input.value > 5) {
+      input.value = 5;
+    }
+  }
 };
