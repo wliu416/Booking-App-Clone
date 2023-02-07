@@ -59,7 +59,7 @@ footer {
 
 .property_photo_text1 {
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .property_photo_text2 {
@@ -102,6 +102,143 @@ footer {
     color: #ff5a5f;
   }
 
+  .host_reservation_request_button_approve2 {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  
+  .host_reservation_request_button_approve2:hover {
+    background-color: #00A699;
+    border-color: #00A699;
+    color: white;
+  }
+  
+  .host_reservation_request_button_approve2:active:focus {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+  }
+
+  .reply_button {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
+  .reply_button:hover {
+    background-color: #00A699;
+    border-color: #00A699;
+    color: white;
+  }
+  
+  .reply_button:active:focus {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+  }
+
+  
+  .reply {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content, .dropdown-content:hover {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+
+
+
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #f9f9f9;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    top: 50px;
+  }
+  
+  .dropdown-content2 a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown2:hover .dropdown-content2, .dropdown-content:hover {
+    display: block;
+  }
+
+  .dropdown-content2 a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+
+  .text-input-box {
+    display: none;
+  }
+
+  .reply-box {
+    border-radius: 10px;
+  }
+
+  
+
+  
+  
+  
+  
+  
 
 
 
