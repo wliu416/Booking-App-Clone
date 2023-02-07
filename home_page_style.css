@@ -59,7 +59,7 @@ footer {
 
 .property_photo_text1 {
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .property_photo_text2 {
@@ -100,6 +100,28 @@ footer {
     background-color: white;
     border-color: #ff5a5f;
     color: #ff5a5f;
+  }
+
+  .host_reservation_request_button_approve2 {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  
+  .host_reservation_request_button_approve2:hover {
+    background-color: #00A699;
+    border-color: #00A699;
+    color: white;
+  }
+  
+  .host_reservation_request_button_approve2:active:focus {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
   }
 
   .dropdown {
