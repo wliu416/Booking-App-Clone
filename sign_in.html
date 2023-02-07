@@ -20,6 +20,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-md nav_sign_in">
+        <a href="index.html" class="navbar-brand">
+          <img
+            src="images/logo.png"
+            alt="Restify logo"
+            width="60"
+            height="40"
+            class="d-inline-block align-bottom"
+          />
+          <span
+            style="
+              color: #ff5a5f;
+              font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+                Helvetica Neue, sans-serif;
+              font-weight: bold;
+            "
+          >
+            Restify
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#toggleMobileMenu"
+          aria-controls="toggleMobileMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="toggleMobileMenu">
+          <ul class="navbar-nav ms-auto text-center">
+            <li>
+              <a class="nav-link" href="sign_up.html">Sign Up</a>
+            </li>
+            <li>
+              <a class="nav-link" href="sign_in.html">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <main>
       <div
         class="needs-validation col-md-4 offset-md-4 signin_container border border-secondary"
