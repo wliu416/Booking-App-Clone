@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Property</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="booking_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
+
+</head>
+
+<body>
+
+    <!-- The header -->
+    <div class="container header">
+        <nav class="navbar navbar-expand-md">
+            <a hred="#" class="navbar-brand">
+                <img src="images/logo.png" alt="Restify logo" width="60" height="40" class="d-inline-block align-bottom">
+                <span
+                    style="color: #ff5a5f; font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; font-weight: bold;">
+                    Restify
+                </span>
+            </a>
+
+            <div class="searchbox">
+                <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li>
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <hr id="horizontal_line_1_home_page">
+
+    <!-- main content -->
+    <main class="d-flex home_page_main">
+        <div class="d-flex main-container" style="padding: 1rem;">
+            <div class=" Host-Information" style="padding: 1rem;">
+                <h3> Your Host Profile:</h3>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="images/host.jpg" alt="Host Name">
+                    <div class="card-body">
+                      <h5 class="card-title">Tifa Lockhart</h5>
+                      <p class="card-text">Hi! I run the Seventh Heaven Inn in Midgar's Sector Seven Slums!</p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item fa fa-envelope-o"> Email: tlockhart@shinra.org    </li>
+                        <li class="list-group-item 	fa fa-address-card"> Cell: +1 777-777-7777    </li>
+                        <li class="list-group-item fa fa-eye-slash"> Password: ****************    </li>
+                      </ul>
+                      <a href="demo_persons_profile.html" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="d-inline-block List-Of-Properties" style="padding: 1rem;">
+                <h3> Your Properties:</h3>
+                <a href="property_page.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-6 col-md-5">
+                                <img src="images/italian_house.jpg" class="card-img img-fluid rounded-start" alt="italian house">
+                            </div>
+                            <div class="col-6 col-md-7">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="h-100">
+                                        <h4 class="card-title" style="color: grey;">Italy</h4>
+                                        <h2 class="card-title">Lake Como Villa</h2>
+                                        <p class="card-text">
+                                            This beautiful lakeside villa is a one of a kind. Located
+                                            in the Lombardy region of Italy, beside the famous Lake Como,
+                                            you will be able to go on a grand escape!
+                                        </p>
+                                        <h4 class="card-title mb-3">$<strong>245</strong><span style="color: grey;">/night</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="property_page.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-6 col-md-5">
+                                <img src="images/seventh-heaven.jpg" class="card-img img-fluid rounded-start" alt="italian house">
+                            </div>
+                            <div class="col-6 col-md-7">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="h-100">
+                                        <h4 class="card-title" style="color: grey;">Midgar</h4>
+                                        <h2 class="card-title">Seventh Heaven Inn</h2>
+                                        <p class="card-text">
+                                            This is totally not a base for environmental activists!
+                                        </p>
+                                        <h4 class="card-title mb-3">$<strong>245</strong><span style="color: grey;">/night</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+        <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+</body>
+
+</html>
