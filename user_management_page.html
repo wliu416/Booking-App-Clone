@@ -20,16 +20,23 @@
         style="min-height: 100vh; height: 100%"
       >
         <div class="container">
+          <div
+            class="fs-2 fw-bold d-flex align-items-center justify-content-center"
+          >
+            <p class="main_title_host_pending_reservation">
+              Personal Activities
+            </p>
+          </div>
           <div class="row mb-4">
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Pending Reservation Requests</h5>
                   <p class="card-text">
-                    Approve or deny reservation requests made for your
-                    properties.
+                    View or cancel pending reservation requests for upcoming
+                    stays.
                   </p>
-                  <a href="host_pending_reservation_requests.html">
+                  <a href="user_pending_reservation_requests.html">
                     <input
                       class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                       type=""
@@ -42,12 +49,12 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Cancellation Requests</h5>
+                  <h5 class="card-title">Present Reservations</h5>
                   <p class="card-text">
-                    Approve or deny cancellation requests on approved
+                    View or request cancellation for upcoming approved
                     reservations.
                   </p>
-                  <a href="host_cancellation_requests.html">
+                  <a href="user_present_reservations.html">
                     <input
                       class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                       type=""
@@ -62,11 +69,12 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Existing Reservations</h5>
+                  <h5 class="card-title">Terminated Reservations</h5>
                   <p class="card-text">
-                    View all upcoming approved reservations at your properties.
+                    View and review terminated reservations (cancelled by the
+                    host).
                   </p>
-                  <a href="host_existing_reservations.html">
+                  <a href="user_terminated_reservations.html">
                     <input
                       class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                       type=""
@@ -81,16 +89,37 @@
                 <div class="card-body">
                   <h5 class="card-title">Completed Reservations</h5>
                   <p class="card-text">
-                    View all completed reservations at your properties. (past
-                    stays)
+                    View all completed reservations (past stays) and leave
+                    review.
                   </p>
-                  <a href="host_completed_reservations.html">
+                  <a href="user_completed_reservations.html">
                     <input
                       class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                       type=""
                       value="View"
                     />
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="container d-flex justify-content-center">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Host Activities</h5>
+                    <p class="card-text">
+                      Manage customer requests and manage my properties.
+                    </p>
+                    <a href="host_management_page.html">
+                      <input
+                        class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
+                        type=""
+                        value="Manage"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,91 +1,77 @@
-// cancelling existing reservations button
 window.onload = function () {
   document
-    .getElementById("host_existing_reservation_btn_decline1")
+    .getElementById("user_present_reservations_btn_cancel1")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline1")
+    .getElementById("user_present_reservations_btn_cancel1")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
 
   document
-    .getElementById("host_existing_reservation_btn_decline2")
+    .getElementById("user_present_reservations_btn_cancel2")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline2")
+    .getElementById("user_present_reservations_btn_cancel2")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
 
   document
-    .getElementById("host_existing_reservation_btn_decline3")
+    .getElementById("user_present_reservations_btn_cancel3")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline3")
+    .getElementById("user_present_reservations_btn_cancel3")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
 
   document
-    .getElementById("host_existing_reservation_btn_decline4")
+    .getElementById("user_present_reservations_btn_cancel4")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline4")
+    .getElementById("user_present_reservations_btn_cancel4")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
 
   document
-    .getElementById("host_existing_reservation_btn_decline5")
+    .getElementById("user_present_reservations_btn_cancel5")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline5")
+    .getElementById("user_present_reservations_btn_cancel5")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";
     });
 
   document
-    .getElementById("host_existing_reservation_btn_decline6")
+    .getElementById("user_present_reservations_btn_cancel6")
     .addEventListener("click", function (event) {
       event.preventDefault();
-      this.innerHTML = "Declined";
+      this.innerHTML = "Cancellation Requested";
     });
   document
-    .getElementById("host_existing_reservation_btn_decline6")
-    .addEventListener("click", function () {
-      this.style.backgroundColor = "#484848";
-      this.style.color = "white";
-    });
-
-  document
-    .getElementById("host_existing_reservation_btn_decline7")
-    .addEventListener("click", function (event) {
-      event.preventDefault();
-      this.innerHTML = "Declined";
-    });
-  document
-    .getElementById("host_existing_reservation_btn_decline7")
+    .getElementById("user_present_reservations_btn_cancel6")
     .addEventListener("click", function () {
       this.style.backgroundColor = "#484848";
       this.style.color = "white";

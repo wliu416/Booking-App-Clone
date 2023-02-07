@@ -248,6 +248,24 @@ hr {
   width: 100%;
 }
 
+.user_present_reservations_btn_cancel {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+  border: 2px solid;
+}
+
+.user_present_reservations_btn_cancel:hover {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.user_present_reservations_btn_cancel:active:focus {
+  background-color: white;
+  border-color: #484848;
+  color: #484848;
+}
+
 @media (max-width: 767.11px) {
   .reservation_card_title {
     font-size: 15px;
@@ -266,13 +284,9 @@ hr {
   }
 
   .host_reservation_request_button_approve {
-    height: 30px;
-    width: 70px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .host_reservation_request_button_decline {
-    height: 30px;
-    width: 60px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
