@@ -124,6 +124,37 @@ footer {
     color: #00A699;
   }
 
+  .reply_button {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
+  .reply_button:hover {
+    background-color: #00A699;
+    border-color: #00A699;
+    color: white;
+  }
+  
+  .reply_button:active:focus {
+    background-color: white;
+    border-color: #00A699;
+    color: #00A699;
+  }
+
+  
+  .reply {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+
   .dropdown {
     position: relative;
     display: inline-block;
@@ -192,6 +223,16 @@ footer {
     background-color: #ddd;
     border-radius: 10px;
   }
+
+  .text-input-box {
+    display: none;
+  }
+
+  .reply-box {
+    border-radius: 10px;
+  }
+
+  
 
   
   
