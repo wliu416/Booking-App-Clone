@@ -102,10 +102,6 @@ footer {
   border: 1px solid lightgray;
 }
 
-.footer_host_management {
-  margin-top: -3rem;
-}
-
 .host_reservation_request_button_approve {
   background-color: white;
   border-color: #ff5a5f;
