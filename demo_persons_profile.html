@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div
+        class="container d-flex align-items-center justify-content-center col-sm-6 col-md-6 col-lg-5"
+        style="min-height: 100vh; height: 100%"
+      >
+        <div class="container">
+          <div class="fs-1 fw-bold">Personal Info</div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="img_profile_container">
+                <img
+                  class="image_profile"
+                  src="images_customer_profile/Random_guy_profile_pic.png"
+                  alt="Avatar"
+                />
+              </div>
+              <div class="text-center update_profile_picture">
+                <a class="update_profile_picture_link" href="update_photo.html"
+                  >Update photo</a
+                >
+              </div>
+
+              <div class="Legal_name_container">
+                <p class="fs-5 legal_name_profile">Legal Name</p>
+                <p class="actual_legal_name_profile">Jack Smith</p>
+                <details class="text-end">
+                  <summary
+                    class="fw-semibold text-decoration-underline legal_name_summary"
+                  >
+                    Edit
+                  </summary>
+                  <input
+                    class="form-control fs-6 fw-semibold"
+                    type="text"
+                    id=""
+                    placeholder="First name"
+                    required
+                  />
+                  <input
+                    class="form-control fs-6 fw-semibold"
+                    type="text"
+                    id=""
+                    placeholder="Last name"
+                    required
+                  />
+                  <input
+                    class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
+                    type="submit"
+                    value="Save"
+                  />
+                </details>
+              </div>
+
+              <hr />
+
+              <div class="email_address_container">
+                <p class="fs-5">Email Address</p>
+                <p class="email_profile">J***h@gmail.com</p>
+                <details class="text-end">
+                  <summary
+                    class="fw-semibold text-decoration-underline email_address_summary"
+                  >
+                    Edit
+                  </summary>
+                  <input
+                    class="form-control fs-6 fw-semibold"
+                    type="text"
+                    id=""
+                    placeholder="Email Address"
+                    required
+                  />
+                  <input
+                    class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
+                    type="submit"
+                    value="Save"
+                  />
+                </details>
+              </div>
+              <hr />
+
+              <div class="phone_number_container">
+                <p class="fs-5">Phone Number</p>
+                <p class="phone_number_profile">+1 ***-***-1234</p>
+                <details class="text-end">
+                  <summary
+                    class="fw-semibold text-decoration-underline phone_number_summary"
+                  >
+                    Edit
+                  </summary>
+                  <input
+                    class="form-control fs-6 fw-semibold"
+                    type="text"
+                    id=""
+                    placeholder="Phone number"
+                    required
+                  />
+                  <input
+                    class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
+                    type="submit"
+                    value="Save"
+                  />
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+      <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

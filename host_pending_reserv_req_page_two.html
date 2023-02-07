@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Javascript file -->
+    <link rel="stylesheet" href="script.css" />
+
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="min-height: 100vh; height: 100%"
+      >
+        <div class="container">
+          <div
+            class="fs-2 fw-bold d-flex align-items-center justify-content-evenly"
+          >
+            <p class="main_title_host_pending_reservation">
+              Pending Reservation Requests
+            </p>
+            <a
+              href="#"
+              class="btn btn-primary fw-semibold refresh_btn_host_pending_reservation"
+              >Refresh</a
+            >
+          </div>
+          <div
+            class="container d-flex align-items-center justify-content-center"
+          >
+            <div class="card-deck w-75">
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Oceanview Estate
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Sligo, Ireland
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Emma Watson
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 1 February 2023, 1:55 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 March 2023 - 6 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-wheelchair fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Wheelchair user
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              Requesting approval for service dog to be present
+                              during stay.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out policy
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve1"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline1"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Valley View Estates
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Toscana, Italy
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Benjamin Reyes
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 1 February 2023, 3:50 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 4 May 2023 - 5 May 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-blind fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Visually impaired
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              Requesting approval for service dog to be present
+                              during stay.
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out policy
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve2"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline2"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Riverwalk Villas
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Sligo, Ireland
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Charlotte Clark
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 1 February 2023, 4:01 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 March 2023 - 5 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request: None
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer: None
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out policy
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve3"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline3"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Lakeside Paradise
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Sligo, Ireland
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Ethan Nguyen
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 1 February 2023, 4:30 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 March 2023 - 5 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-deaf fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Hard of hearing
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer: None
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                          Customers are aware of 3:00 PM check-in and 11:00 AM
+                          check-out
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve4"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline4"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Coastal Retreat
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Sligo, Ireland
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Isabella Garcia
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 2 February 2023, 12:32 PM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 March 2023 - 5 March 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request: None
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>Requesting toddler safe environment.</li>
+                            <li>
+                              Requesting check-in at 1:00 PM instead of 3:00 PM.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve5"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline5"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card w-100 mb-4">
+                <div class="card-body d-flex justify-content-between">
+                  <div>
+                    <h5
+                      class="card-title font-weight-bold reservation_card_title"
+                    >
+                      Wildflower Ranch
+                    </h5>
+                    <h6 class="reservation_card_location">
+                      Location: Toscana, Italy
+                    </h6>
+                    <a
+                      class="fw-semibold host_pending_reservation_view_property_link"
+                      href="Host_property_page_after.html"
+                      >View property</a
+                    >
+                    <details class="mt-2 host_pending_reservation_details">
+                      <summary
+                        class="fw-semibold text-decoration-underline host_pending_reservation_summary"
+                      >
+                        See details
+                      </summary>
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                          Customer Name: Jackson Martinez
+                          <a
+                            class="fw-semibold host_pending_reservation_customer_profile_link"
+                            href="customer_viewable_profile_cannot_review.html"
+                            ><i class="fa fa-user fa-lg" aria-hidden="true"></i
+                          ></a>
+                        </li>
+                        <li class="list-group-item">
+                          Request date: 3 February 2023, 9:45 AM
+                        </li>
+                        <li class="list-group-item">
+                          Dates requested: 3 April 2023 - 5 April 2023
+                        </li>
+                        <li class="list-group-item">
+                          Special accommodation Request:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              <i
+                                class="fa fa-wheelchair fa-lg"
+                                aria-hidden="true"
+                              ></i>
+                              - Wheelchair user
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="list-group-item">
+                          Special notes from customer:
+                          <ul class="host_pending_reservation_special_request">
+                            <li>
+                              Requesting approval for service dog to be present
+                              during stay.
+                            </li>
+                            <li>
+                              Requesting check-out at 1:00 PM instead of 11:00
+                              AM.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_approve"
+                      id="host_reservation_request_button_approve6"
+                      style="padding: 8px"
+                      >Approve</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary host_reservation_request_button_decline"
+                      id="host_reservation_request_button_decline6"
+                      style="padding: 8px"
+                      >Decline</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="fw-bold d-flex align-items-center justify-content-between"
+              >
+                <a
+                  href="host_pending_reservation_requests.html"
+                  class="btn btn-primary fw-semibold mb-2 prev_btn_format_host_pending_reservation"
+                  >Previous</a
+                >
+                <p>2/2</p>
+                <button
+                  type="button"
+                  class="btn btn-secondary fw-semibold mb-2"
+                  disabled
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer -->
+    <footer>
+      <p>Copyright Restify 2023.</p>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
