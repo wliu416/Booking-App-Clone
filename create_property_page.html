@@ -233,6 +233,58 @@
                               </div>
                         </div>
                         <div class="spacer">
+                            <h4>Pricing: </h4>
+                            <p>You can add segments of time with unique pricing for peak periods.</p>
+
+                            <div class="card" style="font-family: sans-serif;">
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Default: $245 <button class="btn fa fa-pencil" style="justify-content: right;align-self: right;"></button></li>
+                                  
+                                  <li class="list-group-item">
+                                    Feb 7 - Feb 14: $295
+                                    <button class="btn fa fa-trash" style="justify-content: right; align-self: right;"></button>
+                                    <button class="btn fa fa-pencil" style="justify-content: right; align-self: right;"></button>
+                                  </li>
+                                  <li fa fa-delete class="list-group-item">
+                                    Feb 14 - Feb 16: $339
+                                    <button class="btn fa fa-trash" style="justify-content: right;align-self: right;"></button>
+                                    <button class="btn fa fa-pencil" style="justify-content: right;align-self: right;"></button>
+                                  </li>
+                                  <li fa fa-delete class="list-group-item">
+                                    Feb 17 - Feb 31: $295
+                                    <button class="btn fa fa-trash" style="justify-content: right;align-self: right;"></button>
+                                    <button class=" btn fa fa-pencil" style="justify-content: right;align-self: right;"></button>
+                                  </li>
+                                </ul>
+                            </div>
+                            <h5>Add a pricing segment:</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="citysrc">From:</label>
+                                        <input type="date" class="form-control" id="citysrc"
+                                            aria-describedby="emailHelp" placeholder="Eg: Midgar">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="citysrc">To:</label>
+                                        <input type="date" class="form-control" id="citysrc"
+                                            aria-describedby="emailHelp" placeholder="Eg: Midgar">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="citysrc">Pricing:</label>
+                                        <span class="input-group-addon">$CAD</span>
+                                        <input type="text" class="form-control" id="citysrc"
+                                            aria-describedby="emailHelp" placeholder="$">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Add Pricing</button>
+                        </div>
+                        <div class="spacer">
                             <div class="row">
                                 <h4>Thumbnail Picture: </h4>
                                 <p>Please upload an accurate picture of your property.</p>
@@ -248,7 +300,7 @@
                         <!--button class="btn btn-primary" onclick="document.getElementById('SuccessSound').play();">Add Property</button>-->
                     </form>
                     <audio src="12-Fanfare.mp3" id="SuccessSound"></audio>
-                        <button class="btn btn-primary" onclick="document.getElementById('SuccessSound').play();">Add Property</button>
+                        <button class="btn btn-primary" onclick="document.getElementById('SuccessSound').play(); alert('Your Operation is Successful.');">Add Property</button>
                     <script>
                         function success () {
                             document.getElementById('SuccessSound').play();
