@@ -24,10 +24,52 @@
                 </span>
             </a>
 
-            <div class="searchbox">
+            <span class="dropdown2">
                 <input type="text" name="" placeholder="Search" class="home_page_search form-inline">
                 <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
+                <div class="dropdown-content2" style="width: 300px;">
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                    Region: 
+                    <select id="region-select" style="border-radius: 0.5em;">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="europe">Europe</option>
+                        <option value="united-states">United States</option>
+                        <option value="south-america">South America</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="caribbean">East Asia</option>
+                      </select>
+                      <script>
+                          document.getElementById("region-select").value
+                      </script>
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">      
+                    </div>
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        <label for="start-date">End Date:</label>
+                        <input type="date" id="start-date" style="border-radius: 0.5em; border-width: thin;">        
+                    </div>
+
+                    <div style="margin-left: 10px; margin-top: 20px; margin-bottom: 20px;">
+                        Order By: 
+                        <select id="region-select" style="border-radius: 0.5em;">
+                            <option value="anywhere">Random</option>
+                            <option value="europe">Highest Price</option>
+                            <option value="europe">Lowest Price</option>
+                            <option value="united-states">Rating</option>
+                            <option value="south-america">Popularity</option>
+                          </select>
+                          <script>
+                              document.getElementById("region-select").value
+                          </script>
+                        </div>
+
+                    <button id="myButton" style="margin-bottom: 20px; border-radius: 0.5em; width: 200px; margin-left: 30px;"><a href="ordered_property_after.html" style="text-decoration: none;"> <i class="fa-solid fa-magnifying-glass"></i> Apply Filters</a></button>
+
+                </div>
+            </span>
 
             <button
                 class="navbar-toggler"
@@ -50,7 +92,7 @@
                             <div style="margin-bottom: 5px;">JackSmith12, Host</div>
                             <img src="images/random_guy.jpg" style="border-radius: 50%; width: 100px; height: 100px; margin-bottom: 10px;">
                             <div style="color: gray">Toronto, Ontario</div>
-                            <div style="color: gray">jacksmith12@gmail.com</div>
+                            <div style="color: gray">Jacksmith12@gmail.com</div>
                             <div style="margin-top: 10px; margin-bottom: 10px;">Hi, I'm Jack! I own several properties across the GTA, please, be my guest!</div>
                             <a href="demo_persons_profile.html"><i class="fa-solid fa-user"></i> <div>Edit Profile</div></a>
                         </div>
