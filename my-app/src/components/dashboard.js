@@ -28,13 +28,13 @@ function Dashboard() {
                                 View or cancel pending reservation requests for upcoming
                                 stays.
                             </p>
-                            <a href="#">
+                            <Link to="/user_pending">
                                 <input
                                 class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                                 type=""
                                 value="Manage"
                                 />
-                            </a>
+                            </Link>
                             </div>
                         </div>
                     </div>
@@ -46,13 +46,13 @@ function Dashboard() {
                                 View or request cancellation for upcoming approved
                                 reservations.
                             </p>
-                            <a href="#">
+                            <Link to="/user_present">
                                 <input
                                 class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                                 type=""
                                 value="Manage"
                                 />
-                            </a>
+                            </Link>
                             </div>
                         </div>
                     </div>
@@ -66,13 +66,13 @@ function Dashboard() {
                             View and review terminated reservations (cancelled by the
                             host).
                         </p>
-                        <a href="#">
+                        <Link to="/user_terminated">
                             <input
                             class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                             type=""
                             value="View"
                             />
-                        </a>
+                        </Link>
                         </div>
                     </div>
                     </div>
@@ -84,13 +84,13 @@ function Dashboard() {
                         View all completed reservations (past stays) and leave
                         review.
                     </p>
-                    <a href="#">
+                    <Link to="/user_completed">
                         <input
                         class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                         type=""
                         value="View"
                         />
-                    </a>
+                    </Link>
                     </div>
                 </div>
                 </div>

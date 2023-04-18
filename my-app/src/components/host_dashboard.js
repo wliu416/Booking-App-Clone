@@ -27,13 +27,13 @@ function Host_Dashboard() {
                             <p className="card-text">
                                 Approve or deny reservation requests made for your properties.
                             </p>
-                            <a href="#">
+                            <Link to="/host_pending">
                                 <input
                                 class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                                 type=""
                                 value="Manage"
                                 />
-                            </a>
+                            </Link>
                             </div>
                         </div>
                     </div>
@@ -44,13 +44,13 @@ function Host_Dashboard() {
                             <p className="card-text">
                                 Approve or deny cancellation requests on approved reservations.
                             </p>
-                            <a href="#">
+                            <Link to="/host_cancellation">
                                 <input
                                 class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                                 type=""
                                 value="Manage"
                                 />
-                            </a>
+                            </Link>
                             </div>
                         </div>
                     </div>
@@ -63,13 +63,13 @@ function Host_Dashboard() {
                         <p class="card-text">
                             View all upcoming approved reservations at your properties.
                         </p>
-                        <a href="#">
+                        <Link to="/host_existing">
                             <input
                             class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                             type=""
                             value="View"
                             />
-                        </a>
+                        </Link>
                         </div>
                     </div>
                     </div>
@@ -80,13 +80,13 @@ function Host_Dashboard() {
                     <p class="card-text">
                         View all completed reservations at your properties. (past stays)
                     </p>
-                    <a href="#">
+                    <Link to="/host_completed">
                         <input
                         class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                         type=""
                         value="View"
                         />
-                    </a>
+                    </Link>
                     </div>
                 </div>
                 </div>
@@ -99,13 +99,13 @@ function Host_Dashboard() {
                       <p class="card-text">
                         Add new properties to my account or edit existing properties.
                       </p>
-                      <a href="#">
+                      <Link to="/host_properties">
                         <input
                           class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                           type=""
                           value="Manage"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -116,13 +116,13 @@ function Host_Dashboard() {
                       <p class="card-text">
                         View past, present and pending reservations and request cancellations.
                       </p>
-                      <a href="#">
+                      <Link to="/dashboard">
                         <input
                           class="btn btn-success w-100 fw-semibold button_format_sign_up save_button_profile"
                           type=""
                           value="Manage"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
