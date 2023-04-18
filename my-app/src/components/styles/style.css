@@ -266,6 +266,17 @@ hr {
   color: #484848;
 }
 
+.navbar {
+  border-bottom: 0.5px solid gray;
+}
+
+.restify_title {
+  color: #ff5a5f;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 @media (max-width: 767.11px) {
   .reservation_card_title {
     font-size: 15px;
