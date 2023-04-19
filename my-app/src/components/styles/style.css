@@ -331,6 +331,35 @@ hr {
 
 
 @media only screen and (max-width: 660px) {
+
+.dropdown-toggle-no-caret.dropdown-toggle::after {
+  display: none !important;
+}
+
+
+
+.host_reservation_request_button_approve2 {
+  background-color: white;
+  border-color: #00A699;
+  color: #00A699;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+}
+
+.host_reservation_request_button_approve2:hover {
+  background-color: #00A699;
+  border-color: #00A699;
+  color: white;
+}
+
+.host_reservation_request_button_approve2:active:focus {
+  background-color: white;
+  border-color: #00A699;
+  color: #00A699;
+}
+
   .reservation_card_title {
     font-size: 15px;
   }
