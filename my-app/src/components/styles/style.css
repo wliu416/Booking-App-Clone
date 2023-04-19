@@ -277,6 +277,23 @@ hr {
   margin-left: 5px;
 }
 
+.dropdown-toggle-no-caret.dropdown-toggle::after {
+  display: none !important;
+}
+
+.nav-item.dropdown.profile {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-menu.profile {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 @media (max-width: 767.11px) {
   .reservation_card_title {
     font-size: 15px;
