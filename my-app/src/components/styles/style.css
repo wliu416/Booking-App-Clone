@@ -281,16 +281,28 @@ hr {
   display: none !important;
 }
 
-.nav-item.dropdown.profile {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+
+
+.host_reservation_request_button_approve2 {
+  background-color: white;
+  border-color: #00A699;
+  color: #00A699;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
 }
 
-.dropdown-menu.profile {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.host_reservation_request_button_approve2:hover {
+  background-color: #00A699;
+  border-color: #00A699;
+  color: white;
+}
+
+.host_reservation_request_button_approve2:active:focus {
+  background-color: white;
+  border-color: #00A699;
+  color: #00A699;
 }
 
 
