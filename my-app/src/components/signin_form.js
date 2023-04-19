@@ -37,6 +37,8 @@ function SignInForm() {
 
           // Store the access token in local storage
           localStorage.setItem("accessToken", token);
+          localStorage.setItem("username", email);
+          localStorage.setItem("isAuthenticated", true);
 
           navigate("/myProfile");
         })
