@@ -89,7 +89,7 @@ function Navbar() {
             </div>
             </a>
                 <ul className="dropdown-menu profile" aria-labelledby="navbarDropdown" style={{marginTop: '10px'}}>
-                    <li><a className="dropdown-item" href="#" style={{textAlign: 'center'}}>Edit Profile</a></li>
+                    <li><Link className="dropdown-item" to="/myProfile" style={{textAlign: 'center'}}>Edit Profile</Link></li>
                 </ul>
             </div>
                      
