@@ -3,8 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDoorOpen, faBell, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faDoorOpen, faBell, faHouse, faScrewdriverWrench, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import axios from 'axios';
 
 
 const baseURL = "http://127.0.0.1:8000";
@@ -21,27 +23,74 @@ function handleLogout() {
 function Navbar() {
     
     const [notifications, setNotifications] = useState([]);
-    const [user, setUser] = useState({});
+    const [currentPage, setCurrentPage] = useState(1);
+    const [num_notifs, setNumNotifications] = useState(1);
 
-    useEffect(() => {
-        fetch(`${baseURL}/notifications/list/`, {
+    const [user, setUser] = useState({});
+    
+    console.log(currentPage);
+
+
+    const fetchNotifications = async () => {
+        const url = `${baseURL}/notifications/list/?page=${currentPage}`;
+  
+        const response = await fetch(url, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            setNotifications(data.results);
-          })
-          .catch((error) => {
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+  
+        const data = await response.json();
+        const total = data.count;
+        setNumNotifications(Math.ceil(total/5));
+  
+        setNotifications(data.results);
+      };
+
+
+    useEffect(() => {
+        fetchNotifications().catch((error) => {
+          console.error(`Error fetching notifications: ${error}`);
+        });
+      }, [currentPage]);
+
+
+      const handleNextClick = (e) => {
+        e.stopPropagation();
+        if (currentPage < num_notifs) {
+            setCurrentPage((prevPage) => prevPage + 1);
+        }
+      };
+    
+      const handlePrevClick = (e) => {
+        e.stopPropagation();
+        if (currentPage > 1) {
+            setCurrentPage((prevPage) => prevPage - 1);
+        }
+      };
+
+      const fetchNotificationById = async (id) => {
+        const response = await fetch(`${baseURL}/notifications/list/${id}/`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        });
+      
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      
+        const data = await response.json();
+
+        fetchNotifications().catch((error) => {
             console.error(`Error fetching notifications: ${error}`);
           });
-      }, []);
+        
+      };
     
 
         useEffect(() => {
@@ -89,7 +138,8 @@ function Navbar() {
             </div>
             </a>
                 <ul className="dropdown-menu profile" aria-labelledby="navbarDropdown" style={{marginTop: '10px'}}>
-                    <li><Link className="dropdown-item" to="/myProfile" style={{textAlign: 'center'}}>Edit Profile</Link></li>
+                    <li><Link className="dropdown-item" to="/myProfile" style={{textAlign: 'center'}}><FontAwesomeIcon icon={faUser} style={{ color:'#ff5a5f', marginRight: '5px'}}/>
+                    Edit Profile</Link></li>
                 </ul>
             </div>
                      
@@ -100,6 +150,10 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
+                <button id="myButton" className="host_reservation_request_button_approve2"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
+            <FontAwesomeIcon icon={faMagnifyingGlass}/>  Search Property</a></button>
+                </li>
+                <li className="nav-item">
                 <Link to="/dashboard" className="nav-link"><FontAwesomeIcon icon={faHouse} style={{ color:'#ff5a5f'}}/> Dashboard</Link>
                 </li>
                 <li className="nav-item dropdown">
@@ -109,11 +163,12 @@ function Navbar() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 
                 {notifications.map((notification) => (
-                <li key={notification.id}><a className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>{notification.details}</a></li>
+                <li key={notification.id}><a onClick={() => fetchNotificationById(notification.id)} className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>{notification.details}</a></li>
                 ))}
                     
                     <li><hr className="dropdown-divider" /></li>
-                    <li ><a className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>View All</a></li>
+                    <li ><a onClick={handleNextClick} className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>Next</a></li>
+                    <li ><a onClick={handlePrevClick} className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>Previous</a></li>
                 </ul>
                 </li>
                 <li className="nav-item">
@@ -128,3 +183,4 @@ function Navbar() {
   }
 
 export default Navbar;
+
