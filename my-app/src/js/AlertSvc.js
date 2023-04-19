@@ -18,6 +18,7 @@ const NormalAlert = function  (severity, title, message) {
     `);
 }
 
+
  const ClosableAlert = function (message) {
 
     const [open, setOpen] = useState(true);
