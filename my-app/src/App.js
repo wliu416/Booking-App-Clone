@@ -15,6 +15,7 @@ import HostCompleted from "./components/reservations/host_completed_reservations
 import HostExisting from "./components/reservations/host_existing_requests";
 import HostPending from "./components/reservations/host_pending_reservations";
 import HostProperties from "./components/reservations/host_manage_property";
+import BookProperty from "./components/book_property"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -66,9 +67,14 @@ function App() {
           <Route path="/host_properties" element={<HostProperties />}>
             {" "}
           </Route>
+
           <Route path="/editProfilePicture" element={<ProfilePicture/>}>
             {" "}
             </Route>
+
+          <Route path="/book_property/:id/:from/:to/:price" element={<BookProperty />}>
+            {" "}
+          </Route>
         </Routes>
       </div>
     </Router>

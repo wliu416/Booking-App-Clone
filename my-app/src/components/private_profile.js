@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
+
 const baseURL = "http://127.0.0.1:8000";
 
 function PrivateProfile() {
@@ -225,6 +226,7 @@ function PrivateProfile() {
                   <a
                     className="update_profile_picture_link"
                     onClick={handleUpdatePicture}
+
                   >
                     Update photo
                   </a>
@@ -269,6 +271,7 @@ function PrivateProfile() {
                 <div className="email_address_container">
                   <p className="fs-5">Email Address</p>
                   <p className="email_profile">{email}</p>
+
                   <details className="text-end">
                     <summary className="fw-semibold text-decoration-underline email_address_summary">
                       Edit
@@ -294,6 +297,7 @@ function PrivateProfile() {
                 <div className="phone_number_container">
                   <p className="fs-5">Phone Number</p>
                   <p className="phone_number_profile">{phone_number}</p>
+
                   <details className="text-end">
                     <summary className="fw-semibold text-decoration-underline phone_number_summary">
                       Edit
