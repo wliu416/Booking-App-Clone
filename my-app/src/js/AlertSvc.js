@@ -13,7 +13,7 @@ function normalAlert (severity, title, message) {
     `);
 }
 
-const [open, setOpen] = React.useState(true);
+//const [open, setOpen] = React.useState(true);
 
 function closableAlert (message) {
     return `<Collapse in={open}><Alert action={

@@ -5,6 +5,7 @@ import SignInForm from "./components/signin_form";
 import Dashboard from "./components/dashboard";
 import PrivateProfile from "./components/private_profile";
 import Host_Dashboard from "./components/host_dashboard";
+import ProfilePicture from "./components/profile_picture"
 import UserTerminated from "./components/reservations/user_terminated_reservations";
 import UserCompleted from "./components/reservations/user_completed_reservations";
 import UserPresent from "./components/reservations/user_present_reservations";
@@ -15,6 +16,8 @@ import HostExisting from "./components/reservations/host_existing_requests";
 import HostPending from "./components/reservations/host_pending_reservations";
 import HostProperties from "./components/reservations/host_manage_property";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -60,9 +63,12 @@ function App() {
           <Route path="/host_pending" element={<HostPending />}>
             {" "}
           </Route>
-          <Route path="host_properties" element={<HostProperties />}>
+          <Route path="/host_properties" element={<HostProperties />}>
             {" "}
           </Route>
+          <Route path="/editProfilePicture" element={<ProfilePicture/>}>
+            {" "}
+            </Route>
         </Routes>
       </div>
     </Router>
