@@ -1,22 +1,21 @@
-import {Collapse, Alert, AlertTitle} from "@mui/material";
+import { Collapse, Alert, AlertTitle } from "@mui/material";
 
-function simpleAlert (severity, message) {
-    return(`<Alert severity=${severity}>${message}</Alert>`);
+function simpleAlert(severity, message) {
+  return `<Alert severity=${severity}>${message}</Alert>`;
 }
 
-function normalAlert (severity, title, message) {
-    return(
-        `<Alert severity=${severity}>
+function normalAlert(severity, title, message) {
+  return `<Alert severity=${severity}>
             <AlertTitle>${title}</AlertTitle>
             ${message}
             </Alert>
-    `);
+    `;
 }
 
-const [open, setOpen] = React.useState(true);
+// const [open, setOpen] = React.useState(true);
 
-function closableAlert (message) {
-    return `<Collapse in={open}><Alert action={
+function closableAlert(message) {
+  return `<Collapse in={open}><Alert action={
             <IconButton
               aria-label="close"
               color="inherit"
@@ -31,8 +30,7 @@ function closableAlert (message) {
           sx={{ mb: 2 }}>
           ${message}
         </Alert>
-        </Collapse>>`
+        </Collapse>>`;
 }
 
-
-export { simpleAlert, normalAlert, closableAlert}
+export { simpleAlert, normalAlert, closableAlert };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/style.css";
+import "./styles/home_page_style.css";
 import { useNavigate } from "react-router-dom";
 
 const baseURL = "http://127.0.0.1:8000";
@@ -41,6 +42,7 @@ function SignInForm() {
           localStorage.setItem("isAuthenticated", true);
 
           navigate("/myProfile");
+          console.log(localStorage);
         })
         .catch((err) => {
           console.log(err);
