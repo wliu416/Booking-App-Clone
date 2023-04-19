@@ -3,6 +3,7 @@ import "./App.css";
 import SignUpForm from "./components/signup_form";
 import SignInForm from "./components/signin_form";
 import Dashboard from "./components/dashboard";
+import PrivateProfile from "./components/private_profile";
 import Host_Dashboard from "./components/host_dashboard";
 import UserTerminated from "./components/reservations/user_terminated_reservations";
 import UserCompleted from "./components/reservations/user_completed_reservations";
@@ -24,6 +25,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/signIn" element={<SignInForm />}>
+            {" "}
+          </Route>
+          <Route path="/myProfile" element={<PrivateProfile />}>
             {" "}
           </Route>
           <Route path="/dashboard" element={<Dashboard />}>
