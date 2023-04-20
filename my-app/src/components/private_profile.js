@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 const baseURL = "http://127.0.0.1:8000";
 
 function PrivateProfile() {
-  const [data, setData] = useState([]);
   const accessToken = getToken();
   const navigate = useNavigate();
 
@@ -159,7 +158,7 @@ function PrivateProfile() {
   };
 
   const handleUpdatePicture = () => {
-    navigate("/profile_picture.js");
+    navigate("/editProfilePicture");
   };
 
   useEffect(() => {
@@ -173,7 +172,6 @@ function PrivateProfile() {
       })
         .then((response) => response.json())
         .then((data) => {
-          setData(data);
           setFirstName(data.first_name);
           setLastName(data.last_name);
           setEmail(data.email);
@@ -203,7 +201,7 @@ function PrivateProfile() {
       <main>
         <div
           className="container d-flex align-items-center justify-content-center col-sm-6 col-md-6 col-lg-5"
-          styles="min-height: 100vh; height: 100%"
+          style={{ minHeight: "100vh", height: "100%" }}
         >
           <div className="container">
             <div className="fs-1 fw-bold">Personal Info</div>
