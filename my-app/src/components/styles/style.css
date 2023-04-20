@@ -329,16 +329,7 @@ hr {
   justify-content: center;
 }
 
-
-@media only screen and (max-width: 660px) {
-
-.dropdown-toggle-no-caret.dropdown-toggle::after {
-  display: none !important;
-}
-
-
-
-.host_reservation_request_button_approve2 {
+.search_button {
   background-color: white;
   border-color: #00A699;
   color: #00A699;
@@ -348,17 +339,25 @@ hr {
   width: 200px;
 }
 
-.host_reservation_request_button_approve2:hover {
+.search_button:hover {
   background-color: #00A699;
   border-color: #00A699;
   color: white;
 }
 
-.host_reservation_request_button_approve2:active:focus {
+.search_button:active:focus {
   background-color: white;
   border-color: #00A699;
   color: #00A699;
 }
+
+.dropdown-toggle-no-caret.dropdown-toggle::after {
+  display: none !important;
+}
+
+
+@media only screen and (max-width: 660px) {
+
 
   .reservation_card_title {
     font-size: 15px;
