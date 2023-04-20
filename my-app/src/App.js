@@ -75,6 +75,10 @@ function App() {
           <Route path="/book_property/:id/:from/:to/:price" element={<BookProperty />}>
             {" "}
           </Route>
+
+            <Route path="/notification/:notificationId" element={<Notification/>}>
+            {" "}
+          </Route>
         </Routes>
       </div>
     </Router>
