@@ -163,7 +163,16 @@ function Navbar() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 
                 {notifications.map((notification) => (
-                <li key={notification.id}><a onClick={() => fetchNotificationById(notification.id)} className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>{notification.details}</a></li>
+                <li>
+                  <Link 
+                  to={`/notification/${JSON.stringify(notification.details)}`}
+                  onClick={() => {
+                    fetchNotificationById(notification.id);
+                  }} 
+                  className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>
+                    {notification.details}
+                  </Link>
+                </li>
                 ))}
                     
                     <li><hr className="dropdown-divider" /></li>

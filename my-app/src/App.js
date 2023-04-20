@@ -19,6 +19,7 @@ import BookProperty from "./components/book_property";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Notification from "./components/notification";
 
 function App() {
   return (
@@ -77,6 +78,10 @@ function App() {
             path="/book_property/:id/:from/:to/:price"
             element={<BookProperty />}
           >
+            {" "}
+          </Route>
+
+            <Route path="/notification/:notificationId" element={<Notification/>}>
             {" "}
           </Route>
         </Routes>
