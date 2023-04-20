@@ -4,11 +4,10 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/style.css";
 import { getToken, isAuthenticated } from "../js/AuthSvc";
 import Navbar from "./navbar";
-import { normalAlert } from "../js/AlertSvc";
+import { NormalAlert } from "../js/AlertSvc";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-
 
 const baseURL = "http://127.0.0.1:8000";
 
@@ -191,7 +190,7 @@ function PrivateProfile() {
 
   const authenticated = isAuthenticated();
   if (!authenticated) {
-    return normalAlert(
+    return NormalAlert(
       5,
       "Access Denied",
       "You are trying to access a page that requires you to login. You will be logged out and redirected to the Sign-in page."
@@ -226,7 +225,6 @@ function PrivateProfile() {
                   <a
                     className="update_profile_picture_link"
                     onClick={handleUpdatePicture}
-
                   >
                     Update photo
                   </a>
