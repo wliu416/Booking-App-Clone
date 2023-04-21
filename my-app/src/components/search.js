@@ -93,7 +93,7 @@ export default class Search extends React.Component {
     };
 
     handleChangeCity = (e) => {
-        this.setState({ value: e.target.value });
+        this.setState({ cityFilter: e.target.value });
         console.log(this.state);
     };
 

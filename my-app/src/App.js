@@ -28,6 +28,7 @@ import Notification from "./components/notification";
 import Property from "./components/property";
 
 import PublicProfile from "./components/public_profile";
+import CreateProperty from "./components/create_property";
 
 
 
@@ -125,6 +126,15 @@ function App() {
           >
           {" "}
         </Route>
+
+
+          <Route
+
+              path="/property/create"
+              element={<CreateProperty />}
+          >
+            {" "}
+          </Route>
 
         </Routes>
       </div>
