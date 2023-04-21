@@ -23,7 +23,6 @@ import Notification from "./components/notification";
 import PublicProfile from "./components/public_profile";
 
 function App() {
-  localStorage.clear();
   return (
     <Router>
       <ToastContainer />
