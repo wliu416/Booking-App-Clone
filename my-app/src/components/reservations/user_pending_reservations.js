@@ -27,10 +27,10 @@ const BookingCard = ({
   client,
 }) => {
   const accessToken = getToken();
-  console.log(accessToken);
   const [property_data, setPropertyData] = useState([]);
   const [owner_data, setOwnerData] = useState([]);
   const navigate = useNavigate();
+  const [button_display, setButtonDisplay] = useState("Cancel");
 
   useEffect(() => {
     fetchPropertyData();
@@ -113,6 +113,7 @@ const BookingCard = ({
             toast.success(
               "Cancellation is successful. Please refresh the page to see changes."
             );
+            setButtonDisplay("Cancelled");
           }
         })
         .catch((err) => {
@@ -169,7 +170,7 @@ const BookingCard = ({
             style={{ padding: "8px" }}
             onClick={handleCancellation}
           >
-            Cancel
+            {button_display}
           </a>
         </div>
       </div>
