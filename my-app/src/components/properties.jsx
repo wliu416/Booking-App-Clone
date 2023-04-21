@@ -35,17 +35,61 @@ export default class Properties extends React.Component {
         pgno: 1,
         more: true,
         fetching: true,
+        filters: null,
     };
 
     loadMore = () => {
 
         const { pages_loaded, pgno, more, fetching} = this.state;
         if (fetching) {
-
             let url = `${baseURL}/properties?page=${pgno}`
-            if (this.props.filters !== undefined){
-                url = url + `${this.props.filters}`
+
+            const queryParameters = new URLSearchParams(window.location.search)
+            const quere = queryParameters.get("query")
+
+
+            let query = ''
+
+            const name = queryParameters.get("name")
+            const country = queryParameters.get("country")
+            const city = queryParameters.get("city")
+            const search = queryParameters.get("search")
+            const orderBy = queryParameters.get("orderby")
+            //console.log(query)
+
+            if (name != null){
+                query = '&name=' + encodeURIComponent(name.trim());
+
             }
+
+            if (country != null){
+                query = query + '&address_country=' +encodeURIComponent(country.trim());
+
+            }
+
+            if (city != null ){
+                query = query + '&address_city=' + encodeURIComponent(city.trim());
+
+            }
+
+            if (search != null ){
+                query = query + '&search=' + encodeURIComponent(search.trim());
+
+            }
+
+            if (orderBy != null ){
+                query = query + '&ordering=' + encodeURIComponent(orderBy.trim());
+
+            }
+
+            if (query.length >0){
+                url = url  + query;
+                this.setState({
+                    filters: query
+                });
+            }
+
+            console.log(url)
             axios.get(url)
                 .then((response) => {
 
@@ -79,14 +123,60 @@ export default class Properties extends React.Component {
 
     componentDidMount() {
 
+
         console.log("mount properties")
 
         const { pages_loaded, pgno, more, fetching} = this.state;
         if (fetching) {
+
             let url = `${baseURL}/properties?page=${pgno}`
-            if (this.props.filters !== undefined){
-                url = url + `${this.props.filters}`
+
+            const queryParameters = new URLSearchParams(window.location.search)
+            const quere = queryParameters.get("query")
+
+
+            let query = ''
+
+            const name = queryParameters.get("name")
+            const country = queryParameters.get("country")
+            const city = queryParameters.get("city")
+            const search = queryParameters.get("search")
+            const orderBy = queryParameters.get("orderby")
+            //console.log(query)
+
+            if (name != null){
+                query = '&name=' + encodeURIComponent(name.trim());
+
             }
+
+            if (country != null){
+                query = query + '&address_country=' +encodeURIComponent(country.trim());
+
+            }
+
+            if (city != null ){
+                query = query + '&address_city=' + encodeURIComponent(city.trim());
+
+            }
+
+            if (search != null ){
+                query = query + '&search=' + encodeURIComponent(search.trim());
+
+            }
+
+            if (orderBy != null ){
+                query = query + '&ordering=' + encodeURIComponent(orderBy.trim());
+
+            }
+
+            if (query.length >0){
+                url = url  + query;
+                this.setState({
+                    filters: query
+                });
+            }
+
+            console.log(url)
             axios.get(url)
                 .then((response) => {
 
@@ -116,14 +206,15 @@ export default class Properties extends React.Component {
 
 
     render() {
-        const { pages_loaded, pgno, more} = this.state;
+        const { pages_loaded, pgno, more, fetching, filters} = this.state;
+        console.log(filters)
 
         return (
             <>
                 <Navbar />
                 <div style={{margin: '1rem'}}>
                     <div className="home_cards">
-                        <PropertyIndex cards={pages_loaded}/>
+                        <PropertyIndex cards={pages_loaded} filters={filters}/>
                         <div className="d-grid gap-2 col-6 mx-auto">
                             <button className="btn btn-success w-100 fw-semibold button_format_sign_in mx-auto" onClick={this.loadMore} disabled={!more} style={{paddingLeft: '4rem', paddingRight: '4rem'}}>Show more</button>
                         </div>

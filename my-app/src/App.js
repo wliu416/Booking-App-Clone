@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import PropertyPage from "./components/properties";
 import Properties from "./components/properties";
+import Search from "./components/search";
 
 import Notification from "./components/notification";
 import PublicProfile from "./components/public_profile";
@@ -96,12 +97,27 @@ function App() {
               path="/properties"
               element={<Properties/>}
 
-            path="/notification/:notificationId"
-            element={<Notification />}
+          >
+            {" "}
+          </Route>
+
+          <Route
+
+
+              path="/notification/:notificationId"
+              element={<Notification />}
 
           >
             {" "}
           </Route>
+
+
+          <Route
+          path="/search"
+          element={<Search />}
+          >
+          {" "}
+        </Route>
         </Routes>
       </div>
     </Router>

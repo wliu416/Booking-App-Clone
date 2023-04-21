@@ -33,7 +33,7 @@ export default class PropertyIndex extends React.Component {
     componentDidMount() {
 
         console.log("mount cards")
-        this.setState({pages_loaded: this.props.cards});
+        this.setState({pages_loaded: this.props.cards, filters: this.props.filters});
 
     }
 
@@ -41,13 +41,12 @@ export default class PropertyIndex extends React.Component {
     render() {
         const { pages_loaded} = this.state;
 
-        console.log(pages_loaded)
-
+        console.log(this.props.filters)
 
         let items = [];
         for (let i = 0; i < pages_loaded.length; i++) {
             items.push(
-                <PropertyUnit page={pages_loaded[i]}/>
+                <PropertyUnit page={pages_loaded[i]} filters={this.props.filters}/>
             );
         }
 
