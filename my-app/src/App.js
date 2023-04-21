@@ -75,7 +75,7 @@ function App() {
             {" "}
           </Route>
 
-          <Route path="/public_profile/:owner" element={<PublicProfile />}>
+          <Route path="/public_profile/:id" element={<PublicProfile />}>
             {" "}
           </Route>
 

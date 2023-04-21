@@ -120,6 +120,16 @@ footer {
   color: #ff5a5f;
 }
 
+.host_reservation_request_button_approve:disabled {
+  background-color: gray;
+  border-color: gray;
+}
+
+.host_reservation_request_button_decline:disabled {
+  background-color: gray;
+  border-color: gray;
+}
+
 .host_reservation_request_button_decline {
   background-color: white;
   border-color: #484848;
@@ -272,7 +282,8 @@ hr {
 
 .restify_title {
   color: #ff5a5f;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   margin-left: 5px;
 }
@@ -296,7 +307,7 @@ hr {
   padding-bottom: 0.75rem;
 }
 
-.data_entry{
+.data_entry {
   display: inline-block;
   max-width: 66%;
   padding: 1rem;
@@ -331,8 +342,8 @@ hr {
 
 .search_button {
   background-color: white;
-  border-color: #00A699;
-  color: #00A699;
+  border-color: #00a699;
+  color: #00a699;
   border: 2px solid;
   border-radius: 10px;
   height: 40px;
@@ -340,25 +351,22 @@ hr {
 }
 
 .search_button:hover {
-  background-color: #00A699;
-  border-color: #00A699;
+  background-color: #00a699;
+  border-color: #00a699;
   color: white;
 }
 
 .search_button:active:focus {
   background-color: white;
-  border-color: #00A699;
-  color: #00A699;
+  border-color: #00a699;
+  color: #00a699;
 }
 
 .dropdown-toggle-no-caret.dropdown-toggle::after {
   display: none !important;
 }
 
-
 @media only screen and (max-width: 660px) {
-
-
   .reservation_card_title {
     font-size: 15px;
   }
