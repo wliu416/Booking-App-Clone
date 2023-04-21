@@ -42,6 +42,8 @@ function Property() {
 
     const [urls, setUrls] = useState([]);
 
+    const [prices, setPrices] = useState([]);
+
     //get the property itself
     useEffect(() => {
         const fetchData = async () => {
@@ -202,6 +204,37 @@ function Property() {
         
       }, []);
 
+
+      //for getting start data, end date and prices
+      useEffect(() => {
+        const fetchPricesData = async () => {
+          try {
+            const response = await fetch(`${baseURL}/properties/${id}/prices/`, {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            });
+      
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            
+            const data = await response.json();
+            setPrices(data);
+
+          } catch (error) {
+            console.error(`Error fetching user data: ${error}`);
+            setPrices([]);
+          }
+        };
+          fetchPricesData();
+        
+      }, [currentPage]);
+
+      console.log(prices)
+
+
       
       console.log(numpages);
       console.log(currentPage);
@@ -233,10 +266,16 @@ function Property() {
             <a href={`${baseURL}${url.image}`} data-lightbox="mygallery"><img src={`${baseURL}${url.image}`} style={{marginLeft: '30px', marginTop: '20px', borderRadius: '20px', height: '200px', width: '200px'}} /></a>
         ))}
         </div>
-        
-        {!owns ?
-        <div style={{ float: 'left', marginTop: '20px', marginLeft: '30px'}}><button id="myButton" className="search_button"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
-            <FontAwesomeIcon icon={faLocationDot}/>  Book This Property!</a></button></div> : null}
+
+        {!owns ? (
+  prices.map((price) => (
+    <Link
+      to={`/book_property/${id}/${price.start_date}/${price.end_date}/${price.pricing}`}
+    >
+      <button>{price.pricing}</button>
+    </Link>
+  ))
+) : null}
         
 
           <h3 style={{ textAlign: 'left', marginLeft: '30px', marginTop: '70px'}}>About This Property</h3>

@@ -119,10 +119,10 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/properties">
             <img src={require('./logo.png')} alt="Logo" width="50" height="40" className="d-inline-block align-bottom" />
             <span className="restify_title">Restify</span>
-            </a>
+            </Link>
 
             <div className="nav-item dropdown profile">
             <a className="nav-link dropdown-toggle dropdown-toggle-no-caret" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -148,8 +148,8 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                <button id="myButton" className="search_button"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
-            <FontAwesomeIcon icon={faMagnifyingGlass}/>  Search Property</a></button>
+                <button id="myButton" className="search_button"><Link to="/search" style={{ textDecoration:'none', color:'inherit'}}>
+            <FontAwesomeIcon icon={faMagnifyingGlass}/>  Search Property</Link></button>
                 </li>
                 <li className="nav-item">
                 <Link to="/dashboard" className="nav-link"><FontAwesomeIcon icon={faHouse} style={{ color:'#ff5a5f'}}/> Dashboard</Link>
