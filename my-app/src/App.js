@@ -19,8 +19,17 @@ import BookProperty from "./components/book_property";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import PropertyPage from "./components/properties";
+import Properties from "./components/properties";
+import Search from "./components/search";
+
 import Notification from "./components/notification";
 import Property from "./components/property";
+
+import PublicProfile from "./components/public_profile";
+
+
 
 function App() {
   return (
@@ -75,6 +84,10 @@ function App() {
             {" "}
           </Route>
 
+          <Route path="/public_profile/:id" element={<PublicProfile />}>
+            {" "}
+          </Route>
+
           <Route
             path="/book_property/:id/:from/:to/:price"
             element={<BookProperty />}
@@ -82,14 +95,37 @@ function App() {
             {" "}
           </Route>
 
-            <Route path="/notification/:notificationId" element={<Notification/>}>
+          <Route
+
+              path="/properties"
+              element={<Properties/>}
+
+          >
             {" "}
           </Route>
+
+          <Route
+
+
+              path="/notification/:notificationId"
+              element={<Notification />}
+
+          >
+            {" "}
+          </Route>
+
 
           <Route path="/property/:id" element={<Property/>}>
             {" "}
           </Route>
-  
+
+          <Route
+          path="/search"
+          element={<Search />}
+          >
+          {" "}
+        </Route>
+
         </Routes>
       </div>
     </Router>

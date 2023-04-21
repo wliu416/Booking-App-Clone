@@ -10,13 +10,14 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 import { useLocation } from "react-router-dom";
-
+import { toast } from "react-toastify";
 
 
 import * as AlertSvc from "../js/AlertSvc.js"
 import * as AuthSvc from "../js/AuthSvc.js"
 
 import HostProperties from "./reservations/host_manage_property";
+import PropertyCard from "./property_tab";
 
 const baseURL = "http://127.0.0.1:8000";
 
@@ -27,11 +28,6 @@ const BookProperty = () => {
     const location = useLocation();
 
     const params = useParams();
-
-    const devCode = function () {
-        const input = document.querySelector("#PhoneInput");
-        window.intlTelInput(input, {separateDialCode : true});
-    }
 
     const formValidation =
         (function () {
@@ -96,27 +92,38 @@ const BookProperty = () => {
     const handleCountryChange = (event) => setCountry(event.target.value);
 
     const handlePostalChange= (event) => setPostal(event.target.value);
+
+    var {  id, from, to, price} = params;
+    var finalprice = 0;
+
+    var date1 = new Date(from);
+    var date2 = new Date(to);
+    var numdiff = Math.floor((date2 - date1) / (1000*60*60*24))
+
+    finalprice = numdiff * price
+
     const handleSubmit = event => {
         console.log("booking property...")
 
         if (!AuthSvc.isAuthenticated()) {
-            AlertSvc.SimpleAlert('error', 'You are not authenticated')
+            toast.error("You are Not Authenticated!");
             navigate("/signIn");
             throw new Error("Not Signed In!")
         }
 
         try {
-            var {  id, from, to, price} = params;
             console.log(id, from, to, price);
 
             event.preventDefault();
             setSubmitting(true);
             const formData = new FormData(event.target);
 
-            const requestData = {
+
+
+            var requestData = {
                 start_date: from,
                 end_date: to,
-                invoice_cost: price,
+                invoice_cost: finalprice,
                 state: "Pending",
                 billing_address_string: address,
                 billing_address_city: city,
@@ -124,6 +131,12 @@ const BookProperty = () => {
                 billing_address_province: province,
                 billing_address_postal_code: postal
             };
+
+            if (!from || !to || !price || !address) {
+                requestData = {}
+            }
+
+
 
             console.log(requestData);
 
@@ -141,13 +154,14 @@ const BookProperty = () => {
                         AlertSvc.SimpleAlert("success", "Booking Successful!")
                         window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank').focus();
                         navigate("/user_pending");
+                        toast.success("Booking Sent for Approval!");
                     } else if (status === 404) {
-                        AlertSvc.SimpleAlert("error", "Not Found.")
+                        toast.warn("Oops, something has gone wrong... Please Visit the Support Page.")
                     } else if (status === 401) {
-                        AlertSvc.SimpleAlert("error", "You are not permitted to book this property.")
+                        toast.warn("Your Session has Expired. Please Log On again")
                         navigate("/signIn");
                     }else if (status === 400) {
-                        AlertSvc.SimpleAlert("error", "Please Check that all fields are filled in.")
+                        toast.error("One or more fields are incorrect.")
                     }
                 })
                 .catch((err) => {
@@ -338,50 +352,19 @@ const BookProperty = () => {
                 <div className="propertyInfo">
                     <div className="card">
                         <div className="row gy-7">
-                            <img src="images/interior2.png" className="card-img img-fluid rounded-start"
-                                 alt="spanish house"></img>
-                        </div>
-                        <div className="row gy-7">
                             <div className="card-body d-flex flex-column">
                                 <div className="h-100">
-                                    <h4 className="card-title" style={{color: 'grey'}}>Valencia, Spain</h4>
-                                    <h2 className="card-title">Spanish Mediterranean Retreat</h2>
-                                    <p className="card-text">
-                                        This Spanish retreat is located only 5 kilometers from the center of Valencia.
-                                        Located near the beach, you can enjoy the hot sun while swimming in the
-                                        beautiful blue ocean. The property is also located near many restaurants, enjoy
-                                        Spanish cuisine such as Tapas and many more. Valencia is a city known for its
-                                        architecture, culture, and rich history. There is an endless amount of things
-                                        that you can do there, sightseeing, eating, walking, going to the beach, the
-                                        possibilities are endless. The property itself has Moorish influence and has the
-                                        design of a mosque's interior as a homage to Spain's Islamic past. The property
-                                        comes with 1 bedroom and 1 bathroom and is suitable for 2 guests, perfect for a
-                                        couple's honeymoon!
-                                    </p>
-                                    <h4 className="card-title mb-3"><strong>Price: </strong><span style={{color: 'grey'}}>CAD
-                                        $299/night (Discount!)</span></h4>
+                                   <PropertyCard property_id={id}/>
 
                                 </div>
                             </div>
                             <div className="card-body d-flex flex-column">
                                 <h4>Your Booking Information:</h4>
                                 <div className="h-100">
-                                    <p className="card-text"><strong>Number of Guests: </strong><span
-                                        style={{color: 'grey'}}>
-                                        3</span></p>
-                                    <p className="card-text"><strong>From: </strong><span style={{color: 'grey'}}>Feb 12,
-                                        2023</span></p>
-                                    <p className="card-text"><strong>To: </strong><span style={{color: 'grey'}}>Feb 14,
-                                        2023</span></p>
+                                    <p className="card-text"><strong>From: </strong><span style={{color: 'grey'}}>{from}</span></p>
+                                    <p className="card-text"><strong>To: </strong><span style={{color: 'grey'}}>{to}</span></p>
                                     <p className="card-text"><strong>Net Cost: </strong><span style={{color: 'grey'}}>CAD
-                                        $490.00</span></p>
-                                    <p className="card-text"><strong>Cleaning Fees: </strong><span style={{color: 'grey'}}>CAD
-                                        $110.00</span></p>
-                                    <p className="card-text"><strong>Taxes (GST 5%): </strong><span
-                                        style={{color: 'grey'}}>CAD
-                                        $30.00</span></p>
-                                    <p className="card-text"><strong>Total Cost: </strong><span style={{color: 'grey'}}>CAD
-                                        $630.00</span></p>
+                                        ${finalprice}</span></p>
                                 </div>
                             </div>
                         </div>
