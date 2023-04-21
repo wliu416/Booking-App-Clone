@@ -26,6 +26,7 @@ import Search from "./components/search";
 
 import Notification from "./components/notification";
 import PublicProfile from "./components/public_profile";
+import CreateProperty from "./components/create_property";
 
 
 function App() {
@@ -118,6 +119,14 @@ function App() {
           >
           {" "}
         </Route>
+
+          <Route
+
+              path="/property/create"
+              element={<CreateProperty />}
+          >
+            {" "}
+          </Route>
         </Routes>
       </div>
     </Router>
