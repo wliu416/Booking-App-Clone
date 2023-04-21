@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/style.css";
@@ -11,6 +11,7 @@ import Navbar from "./navbar";
 import Reviewername from "./reviewername";
 import "./styles/lightbox.min.css";
 import Replies from "./replies";
+import { borderRadius } from "@mui/system";
 
 
 const baseURL = "http://127.0.0.1:8000";
@@ -43,6 +44,11 @@ function Property() {
     const [urls, setUrls] = useState([]);
 
     const [prices, setPrices] = useState([]);
+
+    const [rating, setRating] = useState('');
+    const [comment, setComment] = useState('');
+
+
 
     //get the property itself
     useEffect(() => {
@@ -143,7 +149,6 @@ function Property() {
             const data = await response.json();
             setReviews(data.results);
             setReviewCount(data.count);
-            setNumPages(Math.ceil(reviewcount/5));
             console.log(currentPage);
 
           } catch (error) {
@@ -154,6 +159,10 @@ function Property() {
           fetchReviewData();
         
       }, [currentPage]);
+
+      useEffect(() => {
+        setNumPages(Math.ceil(reviewcount/5));
+      }, [reviewcount]);
 
       useEffect(() => {
         let sum = 0;
@@ -232,13 +241,64 @@ function Property() {
         
       }, [currentPage]);
 
-      console.log(prices)
 
+      function handleRating(event) {
+        setRating(event.target.value);
+      }
 
-      
-      console.log(numpages);
-      console.log(currentPage);
+      function handleComment(event) {
+        setComment(event.target.value);
+      }
 
+      function handleSubmit(event) {
+        event.preventDefault();
+        const requestBody = {
+          rating_num: rating,
+          comment_text: comment
+        }
+
+        fetch(`${baseURL}/properties/${id}/review/`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${accessToken}`
+          },
+          body: JSON.stringify(requestBody)
+        }).then(response => {
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          alert("You have made a comment on this property!")
+        })
+        .catch(error => {
+          console.error(error);
+          alert('You cannot comment: You either already commented on this property, have not terminated or completed this property, or are the property owner');
+        });
+      }
+
+      const handleDelete = () => {
+        fetch(`${baseURL}/properties/${id}/edit/`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(response.statusText);
+            }
+            alert("Comment has been deleted");
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("There was an error deleting the comment");
+          });
+      };
 
       return (
         <>
@@ -272,7 +332,7 @@ function Property() {
     <Link
       to={`/book_property/${id}/${price.start_date}/${price.end_date}/${price.pricing}`}
     >
-      <button>{price.pricing}</button>
+      <button style={{borderColor:'#FF5A5F', borderRadius: '10px', background: 'none', marginRight:'10px', marginTop: '20px'}}>Book Now: ${price.pricing} from {price.start_date} to {price.end_date}</button>
     </Link>
   ))
 ) : null}
@@ -307,15 +367,22 @@ function Property() {
                         <div><img src={require('./star.png')} style={{ width: '20px', marginTop: '-3px'}}></img>{review.rating_num} Stars</div>
                         <div>{review.comment_text}</div>
                         <Replies property_id={id} id={review.id}/>
+
                     </div>
                 ))}
+
+                <form onSubmit={handleSubmit}>
+                  <div><input type="number" id="rating" value={rating} onChange={handleRating} style={{marginLeft: '10px'}}></input></div>
+                  <textarea id="comment" value={comment} onChange={handleComment} style={{marginTop: '10px', marginLeft: '10px'}}></textarea>
+                  <div><button type="submit" style={{height: '50px', borderRadius: '20px', background: 'none', marginLeft: '10px', marginBottom: '20px'}}>Leave a Review</button></div>
+                </form>
 
                 <button onClick={handleNextClick} style={{borderRadius: '5px', marginRight: '10px', marginLeft: '10px', marginBottom: '10px', backgroundColor: 'white'}}>Next</button>
                 <button onClick={handlePrevClick} style={{borderRadius: '5px', backgroundColor: 'white'}}>Previous</button>
 
                 </div>
             </div>
-            {owns ?  <div style={{ float: 'left', marginTop: '10px', marginLeft: '30px', marginBottom: '20px'}}><button id="myButton" className="search_button2"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
+            {owns ?  <div style={{ float: 'left', marginTop: '10px', marginLeft: '30px', marginBottom: '20px'}}><button onClick={handleDelete} id="myButton" className="search_button2"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
             <FontAwesomeIcon icon={faTrash}/>  Delete Property</a></button></div>:null}
          
         </>
