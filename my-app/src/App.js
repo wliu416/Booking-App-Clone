@@ -25,7 +25,10 @@ import Properties from "./components/properties";
 import Search from "./components/search";
 
 import Notification from "./components/notification";
+import Property from "./components/property";
+
 import PublicProfile from "./components/public_profile";
+
 
 
 function App() {
@@ -112,12 +115,17 @@ function App() {
           </Route>
 
 
+          <Route path="/property/:id" element={<Property/>}>
+            {" "}
+          </Route>
+
           <Route
           path="/search"
           element={<Search />}
           >
           {" "}
         </Route>
+
         </Routes>
       </div>
     </Router>

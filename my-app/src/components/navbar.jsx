@@ -27,8 +27,6 @@ function Navbar() {
     const [num_notifs, setNumNotifications] = useState(1);
 
     const [user, setUser] = useState({});
-    
-    console.log(currentPage);
 
 
     const fetchNotifications = async () => {

@@ -362,8 +362,63 @@ hr {
   color: #00a699;
 }
 
+.search_button2 {
+  background-color: white;
+  border-color: red;
+  color: red;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+}
+
+.search_button2:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+.search_button2:active:focus {
+  background-color: white;
+  border-color: red;
+  color: red;
+}
+
+
 .dropdown-toggle-no-caret.dropdown-toggle::after {
   display: none !important;
+}
+
+
+.container_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.amenities, .description {
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.amenities h6, .description h6 {
+  color: gray;
+  margin: 0;
+  text-align: left;
+}
+
+.image_container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+
+
+.gallery img{
+  width: 100%;
 }
 
 @media only screen and (max-width: 660px) {
