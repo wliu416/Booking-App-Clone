@@ -20,6 +20,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Notification from "./components/notification";
+import Property from "./components/property";
 
 function App() {
   return (
@@ -84,6 +85,11 @@ function App() {
             <Route path="/notification/:notificationId" element={<Notification/>}>
             {" "}
           </Route>
+
+          <Route path="/property/:id" element={<Property/>}>
+            {" "}
+          </Route>
+  
         </Routes>
       </div>
     </Router>
