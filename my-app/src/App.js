@@ -97,8 +97,15 @@ function App() {
               path="/properties"
               element={<Properties/>}
 
-            path="/notification/:notificationId"
-            element={<Notification />}
+          >
+            {" "}
+          </Route>
+
+          <Route
+
+
+              path="/notification/:notificationId"
+              element={<Notification />}
 
           >
             {" "}
