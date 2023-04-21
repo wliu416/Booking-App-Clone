@@ -165,7 +165,7 @@ const BookingCard = ({
         <div>
           <a
             href="#"
-            className="btn btn-primary host_reservation_request_button_decline"
+            className="btn btn-primary host_reservation_request_button_approve"
             id="host_existing_reservation_btn_decline1"
             style={{ padding: "8px" }}
             onClick={handleCancellation}
