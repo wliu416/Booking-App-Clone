@@ -25,8 +25,11 @@ import Properties from "./components/properties";
 import Search from "./components/search";
 
 import Notification from "./components/notification";
+import Property from "./components/property";
+
 import PublicProfile from "./components/public_profile";
 import CreateProperty from "./components/create_property";
+
 
 
 function App() {
@@ -82,7 +85,7 @@ function App() {
             {" "}
           </Route>
 
-          <Route path="/public_profile/:owner" element={<PublicProfile />}>
+          <Route path="/public_profile/:id" element={<PublicProfile />}>
             {" "}
           </Route>
 
@@ -113,12 +116,17 @@ function App() {
           </Route>
 
 
+          <Route path="/property/:id" element={<Property/>}>
+            {" "}
+          </Route>
+
           <Route
           path="/search"
           element={<Search />}
           >
           {" "}
         </Route>
+
 
           <Route
 
@@ -127,6 +135,7 @@ function App() {
           >
             {" "}
           </Route>
+
         </Routes>
       </div>
     </Router>
