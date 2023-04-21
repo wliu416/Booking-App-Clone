@@ -21,6 +21,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PropertyPage from "./components/properties";
 import Properties from "./components/properties";
+import Search from "./components/search";
 
 function App() {
   return (
@@ -84,10 +85,18 @@ function App() {
 
           <Route
               path="/properties"
-              element={<Properties/>}
+              element={<Properties />}
           >
             {" "}
           </Route>
+
+
+          <Route
+          path="/search"
+          element={<Search />}
+          >
+          {" "}
+        </Route>
         </Routes>
       </div>
     </Router>

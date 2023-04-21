@@ -31,15 +31,19 @@ export default class PropertyUnit extends React.Component {
     state = {
         properties: [],
         isLoading: false,
-        errorMsg: ''
+        errorMsg: '',
+        filters: null
     };
 
     componentDidMount() {
         this.setState({ isLoading: true });
 
         if (!this.props.filters){
+            const url = `${baseURL}/properties?page=${this.props.page}`
+            console.log('get url w/o filt')
+            console.log(url)
             axios
-                .get(`${baseURL}/properties?page=${this.props.page}`)
+                .get(url)
                 .then((response) => {
                     this.setState({ properties: response.data, errorMsg: '' });
                 })
@@ -52,8 +56,11 @@ export default class PropertyUnit extends React.Component {
                     this.setState({ isLoading: false });
                 });
         } else {
+            const url = `${baseURL}/properties?page=${this.props.page}${this.props.filters}`
+            console.log('get url w/ filt')
+            console.log(url)
             axios
-                .get(`${baseURL}/properties/page=${this.props.page}&${this.props.filters}`)
+                .get(url)
                 .then((response) => {
                     this.setState({ properties: response.data, errorMsg: '' });
                 })
