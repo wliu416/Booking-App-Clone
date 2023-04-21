@@ -29,13 +29,12 @@ function ProfilePicture() {
     } else {
       console.log("This is file uploaded", selected_file);
     }
-    formData.append("avatar", selected_file);
+    formData.set("avatar", selected_file);
 
     fetch(`${baseURL}/users/editProfile/`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${accessToken}`,
-        "Content-Type": "multipart/form-data",
       },
       body: formData,
     })
