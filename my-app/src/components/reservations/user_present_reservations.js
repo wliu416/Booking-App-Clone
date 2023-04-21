@@ -166,7 +166,7 @@ const BookingCard = ({
         <div>
           <a
             href="#"
-            className="btn btn-primary host_reservation_request_button_decline"
+            className="btn btn-primary host_reservation_request_button_approve"
             id="user_present_reservations_btn_cancel1"
             style={{ padding: "8px" }}
             onClick={handleRequestCancellation}
@@ -246,7 +246,7 @@ function UserPresent() {
           <div className="container">
             <div className="fs-2 fw-bold d-flex align-items-center justify-content-evenly">
               <p className="main_title_host_pending_reservation">
-                Approved Reservation Requests
+                Approved Reservations
               </p>
             </div>
             <div className="container d-flex align-items-center justify-content-center">
