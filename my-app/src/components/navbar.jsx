@@ -150,7 +150,7 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                <button id="myButton" className="host_reservation_request_button_approve2"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
+                <button id="myButton" className="search_button"><a href="#" style={{ textDecoration:'none', color:'inherit'}}>
             <FontAwesomeIcon icon={faMagnifyingGlass}/>  Search Property</a></button>
                 </li>
                 <li className="nav-item">
@@ -163,7 +163,16 @@ function Navbar() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 
                 {notifications.map((notification) => (
-                <li key={notification.id}><a onClick={() => fetchNotificationById(notification.id)} className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>{notification.details}</a></li>
+                <li>
+                  <Link 
+                  to={`/notification/${JSON.stringify(notification.details)}`}
+                  onClick={() => {
+                    fetchNotificationById(notification.id);
+                  }} 
+                  className="dropdown-item" href="#" style={{ fontWeight: 'bold', textAlign: 'center' }}>
+                    Notification {notification.id}
+                  </Link>
+                </li>
                 ))}
                     
                     <li><hr className="dropdown-divider" /></li>
