@@ -29,6 +29,7 @@ import Property from "./components/property";
 
 import PublicProfile from "./components/public_profile";
 import CreateProperty from "./components/create_property";
+import EditProperty from "./components/edit_property";
 
 
 
@@ -117,6 +118,10 @@ function App() {
 
 
           <Route path="/property/:id" element={<Property/>}>
+            {" "}
+          </Route>
+
+          <Route path="/property/:id/edit" element={<EditProperty/>}>
             {" "}
           </Route>
 
